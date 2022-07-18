@@ -11,7 +11,6 @@ import {
     DialogTitle,
     Chip,
     Typography,
-    MenuItem,
     Grid,
     Stack,
     Paper,
@@ -26,7 +25,38 @@ import MainCard from 'ui-component/cards/MainCard';
 import { DataGrid, GridToolbarQuickFilter, GridLinkOperator, esES } from '@mui/x-data-grid';
 // dialog form
 import * as React from 'react';
+import { styled } from '@mui/material/styles';
 // ==============================|| PAGE ||============================== //
+const StyledGridOverlay = styled('div')(({ theme }) => ({
+    display: 'flex',
+    flexDirection: 'column',
+    alignItems: 'center',
+    justifyContent: 'center',
+    height: '100%',
+    '& .ant-empty-img-1': {
+        fill: theme.palette.mode === 'light' ? '#aeb8c2' : '#262626'
+    },
+    '& .ant-empty-img-2': {
+        fill: theme.palette.mode === 'light' ? '#f5f5f7' : '#595959'
+    },
+    '& .ant-empty-img-3': {
+        fill: theme.palette.mode === 'light' ? '#dce0e6' : '#434343'
+    },
+    '& .ant-empty-img-4': {
+        fill: theme.palette.mode === 'light' ? '#fff' : '#1c1c1c'
+    },
+    '& .ant-empty-img-5': {
+        fillOpacity: theme.palette.mode === 'light' ? '0.8' : '0.08',
+        fill: theme.palette.mode === 'light' ? '#f5f5f5' : '#fff'
+    }
+}));
+function CustomNoRowsOverlay() {
+    return (
+        <StyledGridOverlay>
+            <Box sx={{ mt: 1 }}>No hay registros que mostrar</Box>
+        </StyledGridOverlay>
+    );
+}
 function QuickSearchToolbar() {
     return (
         <Box
@@ -103,7 +133,8 @@ const columns = [
         cellClassName: 'contenido',
         headerAlign: 'center',
         width: 110,
-        type: 'date'
+        type: 'date',
+        editable: true
     },
     {
         field: 'fechafin',
@@ -133,7 +164,7 @@ const columns = [
     }
 ];
 const rows = [
-    { id: 1, apepaterno: 'Snow', nombres: 'Jon', motivo: 'motivo', descripcion: 'descripcion', fechainicio: '12/07/2022' },
+    { id: 1, apepaterno: 'Snow', nombres: 'Jon', motivo: 'motivo', descripcion: 'descripcion', fechainicio: '7/29/2022' },
     { id: 2, apepaterno: 'Lannister', apematerno: 'Lannister', nombres: 'Cersei', motivo: 'motivo', descripcion: 'descripcion' },
     { id: 3, apepaterno: 'Lannister', apematerno: 'Lannister', nombres: 'Jaime', motivo: 'motivo', descripcion: 'descripcion' },
     { id: 4, apepaterno: 'Stark', apematerno: 'Stark', nombres: 'Arya', motivo: 'motivo', descripcion: 'descripcion' },
@@ -172,10 +203,6 @@ const AutRegFormulario = () => {
     };
     const handleClose = () => {
         setOpen(false);
-    };
-    const [currency, setCurrency] = React.useState();
-    const handleChange = (event) => {
-        setCurrency(event.target.value);
     };
     return (
         <MainCard title="AUTORIZACIONES DE REGULARIZACIÓN DE FORMULARIOS" height="650">
@@ -240,23 +267,31 @@ const AutRegFormulario = () => {
                                     Motivo
                                 </Typography>
                             </DialogContentText>
-                            <TextField
-                                required
-                                select
-                                margin="dense"
-                                id="motivo"
-                                label="---SELECCIONE---"
-                                value={currency}
-                                onChange={handleChange}
+                            <Autocomplete
+                                id="funcionario"
+                                disablePortal
                                 fullWidth
-                                variant="standard"
-                            >
-                                {motivos.map((opcion) => (
-                                    <MenuItem sx={{ color: 'grey.900' }} key={opcion.id} value={opcion.value}>
-                                        {opcion.value}
-                                    </MenuItem>
-                                ))}
-                            </TextField>
+                                options={motivos}
+                                getOptionLabel={(option) => option.value}
+                                renderOption={(props, option) => (
+                                    <Box sx={{ color: 'grey.900' }} component="li" {...props}>
+                                        {option.value}
+                                    </Box>
+                                )}
+                                renderInput={(params) => (
+                                    <TextField
+                                        {...params}
+                                        label="---SELECCIONE---"
+                                        required
+                                        margin="dense"
+                                        variant="standard"
+                                        inputProps={{
+                                            ...params.inputProps,
+                                            autoComplete: 'new-password' // disable autocomplete and autofill
+                                        }}
+                                    />
+                                )}
+                            />
                             <DialogContentText>
                                 <Typography color="error" display="inline">
                                     (*)&nbsp;
@@ -372,7 +407,10 @@ const AutRegFormulario = () => {
                             }
                         }
                     }}
-                    components={{ Toolbar: QuickSearchToolbar }}
+                    components={{
+                        Toolbar: QuickSearchToolbar,
+                        NoRowsOverlay: CustomNoRowsOverlay
+                    }}
                 />
             </Box>
         </MainCard>
