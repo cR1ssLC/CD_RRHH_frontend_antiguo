@@ -4,7 +4,7 @@ import { lazy } from 'react';
 import Loadable from 'ui-component/Loadable';
 import MinimalLayout from 'layout/MinimalLayout';
 
-// login option 3 routing
+// login option routing
 const AuthLogin = Loadable(lazy(() => import('views/pages/authentication/LoginPage')));
 
 // ==============================|| AUTHENTICATION ROUTING ||============================== //

@@ -1,4 +1,5 @@
 import { useState, useRef, useEffect } from 'react';
+import { Link } from 'react-router-dom';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
@@ -149,7 +150,7 @@ const NotificationSection = () => {
                                     </Grid>
                                     <Divider />
                                     <CardActions sx={{ p: 1.25, justifyContent: 'center' }}>
-                                        <Button size="small" disableElevation>
+                                        <Button component={Link} to="/notificaciones" size="small" disableElevation>
                                             Ver Todos
                                         </Button>
                                     </CardActions>
