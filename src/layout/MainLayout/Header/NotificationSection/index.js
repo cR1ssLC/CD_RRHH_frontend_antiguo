@@ -132,6 +132,11 @@ const NotificationSection = () => {
                                                 <Grid item>
                                                     <Typography variant="subtitle1">NOTIFICACIONES</Typography>
                                                 </Grid>
+                                                <Grid item>
+                                                    <Typography component={Link} to="#" variant="subtitle2" color="primary">
+                                                        Marcar todos como leidos
+                                                    </Typography>
+                                                </Grid>
                                             </Grid>
                                         </Grid>
                                         <Grid item xs={12}>
@@ -150,7 +155,7 @@ const NotificationSection = () => {
                                     </Grid>
                                     <Divider />
                                     <CardActions sx={{ p: 1.25, justifyContent: 'center' }}>
-                                        <Button component={Link} to="/notificaciones" size="small" disableElevation>
+                                        <Button component={Link} to="/main/notificaciones" size="small" disableElevation>
                                             Ver Todos
                                         </Button>
                                     </CardActions>

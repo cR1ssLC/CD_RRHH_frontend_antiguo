@@ -36,7 +36,7 @@ const other = {
             id: 'main-page',
             title: 'Inicio',
             type: 'item',
-            url: '/main-page',
+            url: '/main/main-page',
             icon: icons.HomeIcon,
             breadcrumbs: false
         },
@@ -50,14 +50,14 @@ const other = {
                     id: 'regformulario',
                     title: 'Aut. Reg. de Formulario',
                     type: 'item',
-                    url: '/rrhh/boletas/regularizaciones',
+                    url: '/main/rrhh/boletas/regularizaciones',
                     breadcrumbs: false
                 },
                 {
                     id: 'regvacaciones',
                     title: 'Aut. Reg. de Vacaciones',
                     type: 'item',
-                    url: '/rrhh/vacaciones/regularizaciones',
+                    url: '/main/rrhh/vacaciones/regularizaciones',
                     breadcrumbs: false
                 }
             ]
@@ -72,7 +72,7 @@ const other = {
                     id: 'relacion-laboral',
                     title: 'Relación Laboral',
                     type: 'item',
-                    url: '/rrhh/relacion_laboral',
+                    url: '/main/rrhh/relacion_laboral',
                     breadcrumbs: false
                 },
                 {
@@ -84,14 +84,14 @@ const other = {
                             id: 'editar',
                             title: 'Editar',
                             type: 'item',
-                            url: '/rrhh/personal/editar',
+                            url: '/main/rrhh/personal/editar',
                             breadcrumbs: false
                         },
                         {
                             id: 'registro',
                             title: 'Registro',
                             type: 'item',
-                            url: '/rrhh/personal/registro',
+                            url: '/main/rrhh/personal/registro',
                             breadcrumbs: false
                         }
                     ]
@@ -100,14 +100,14 @@ const other = {
                     id: 'cumpleñeros',
                     title: 'Cumpleañeros',
                     type: 'item',
-                    url: '/rrhh/cumpleaniero',
+                    url: '/main/rrhh/cumpleaniero',
                     breadcrumbs: false
                 },
                 {
                     id: 'ubicacion-file',
                     title: 'Ubicación File',
                     type: 'item',
-                    url: '/rrhh/ubicacion_file',
+                    url: '/main/rrhh/ubicacion_file',
                     breadcrumbs: false
                 }
             ]
@@ -116,7 +116,7 @@ const other = {
             id: 'ficha-personal',
             title: 'Ficha Personal',
             type: 'item',
-            url: '/ficha-personal',
+            url: '/main/ficha-personal',
             icon: icons.PersonIcon,
             breadcrumbs: false
         },
@@ -130,14 +130,14 @@ const other = {
                     id: 'organigramas',
                     title: 'Organigramas',
                     type: 'item',
-                    url: '/incorporacion/organigramas',
+                    url: '/main/incorporacion/organigramas',
                     breadcrumbs: false
                 },
                 {
                     id: 'cargos',
                     title: 'Cargos',
                     type: 'item',
-                    url: '/incorporacion/cargos',
+                    url: '/main/incorporacion/cargos',
                     breadcrumbs: false
                 }
             ]
@@ -152,42 +152,42 @@ const other = {
                     id: 'mis-marcaciones',
                     title: 'Mis Marcaciones',
                     type: 'item',
-                    url: '/rrhh/marcaciones/mis_marcaciones',
+                    url: '/main/rrhh/marcaciones/mis_marcaciones',
                     breadcrumbs: false
                 },
                 {
                     id: 'aprobacion-formulario',
                     title: 'Aprobación de Formulario',
                     type: 'item',
-                    url: '/rrhh/boletas/aprobacion_boletas',
+                    url: '/main/rrhh/boletas/aprobacion_boletas',
                     breadcrumbs: false
                 },
                 {
                     id: 'recepcion-formulario',
                     title: 'Recepción de Formulario',
                     type: 'item',
-                    url: '/rrhh/boletas/recepcion_boletas',
+                    url: '/main/rrhh/boletas/recepcion_boletas',
                     breadcrumbs: false
                 },
                 {
                     id: 'solicitar-formulario',
                     title: 'Solicitar Formulario',
                     type: 'item',
-                    url: '/rrhh/boletas/solicitud_boleta',
+                    url: '/main/rrhh/boletas/solicitud_boleta',
                     breadcrumbs: false
                 },
                 {
                     id: 'marcados',
                     title: 'Marcados',
                     type: 'item',
-                    url: '/rrhh/marcaciones/reporte',
+                    url: '/main/rrhh/marcaciones/reporte',
                     breadcrumbs: false
                 },
                 {
                     id: 'viajes-comision',
                     title: 'Viajes de Comisión',
                     type: 'item',
-                    url: '/rrhh/marcaciones/viajes',
+                    url: '/main/rrhh/marcaciones/viajes',
                     breadcrumbs: false
                 }
             ]
@@ -202,49 +202,49 @@ const other = {
                     id: 'registro-vacacion',
                     title: 'Registro de Vacación',
                     type: 'item',
-                    url: '/rrhh/vacaciones/registro',
+                    url: '/main/rrhh/vacaciones/registro',
                     breadcrumbs: false
                 },
                 {
                     id: 'sol-programacion-vacacion',
                     title: 'Solicitud Programación Vacación',
                     type: 'item',
-                    url: '/rrhh/vacaciones/programacion/solicitud',
+                    url: '/main/rrhh/vacaciones/programacion/solicitud',
                     breadcrumbs: false
                 },
                 {
                     id: 'aprobacion-programacion',
                     title: 'Aprobación Programación',
                     type: 'item',
-                    url: '/rrhh/vacaciones/programacion/aprobacion',
+                    url: '/main/rrhh/vacaciones/programacion/aprobacion',
                     breadcrumbs: false
                 },
                 {
                     id: 'recepcion-programacion-vac',
                     title: 'Recepción Programación Vacaciones',
                     type: 'item',
-                    url: '/rrhh/vacaciones/programacion/recepcion',
+                    url: '/main/rrhh/vacaciones/programacion/recepcion',
                     breadcrumbs: false
                 },
                 {
                     id: 'solicitud-vacaciones',
                     title: 'Solicitud de Vacaciones',
                     type: 'item',
-                    url: '/rrhh/vacaciones/solicitud',
+                    url: '/main/rrhh/vacaciones/solicitud',
                     breadcrumbs: false
                 },
                 {
                     id: 'aprobacion-vacaciones',
                     title: 'Aprobación de Vacaciones',
                     type: 'item',
-                    url: '/rrhh/vacaciones/aprobacion',
+                    url: '/main/rrhh/vacaciones/aprobacion',
                     breadcrumbs: false
                 },
                 {
                     id: 'recepcion-vacaciones',
                     title: 'Recepción de Vacaciones',
                     type: 'item',
-                    url: '/rrhh/vacaciones/recepcion',
+                    url: '/main/rrhh/vacaciones/recepcion',
                     breadcrumbs: false
                 }
             ]
@@ -264,14 +264,14 @@ const other = {
                             id: 'restablecer-password',
                             title: 'Restablecer Password',
                             type: 'item',
-                            url: '/seguridad/reset_password',
+                            url: '/main/seguridad/reset_password',
                             breadcrumbs: false
                         },
                         {
                             id: 'cambio-password',
                             title: 'Cambio de Password',
                             type: 'item',
-                            url: '/seguridad/change_password',
+                            url: '/main/seguridad/change_password',
                             breadcrumbs: false
                         }
                     ]
@@ -280,14 +280,14 @@ const other = {
                     id: 'gestion-usuario',
                     title: 'Gestión de Usuarios',
                     type: 'item',
-                    url: '/seguridad/usuarios',
+                    url: '/main/seguridad/usuarios',
                     breadcrumbs: false
                 },
                 {
                     id: 'mi-cuenta',
                     title: 'Mi Cuenta',
                     type: 'item',
-                    url: '/seguridad/mi_cuenta',
+                    url: '/main/seguridad/mi_cuenta',
                     breadcrumbs: false
                 }
             ]
@@ -312,7 +312,7 @@ const other = {
                                     id: 'gestion-calendarios-laborales',
                                     title: 'Gestión de calendarios laborales',
                                     type: 'item',
-                                    url: '/rrhh/marcaciones/perfil_laboral',
+                                    url: '/main/rrhh/marcaciones/perfil_laboral',
                                     breadcrumbs: false
                                 }
                             ]
@@ -321,21 +321,21 @@ const other = {
                             id: 'gestion-horarios',
                             title: 'Gestión Horarios',
                             type: 'item',
-                            url: '/rrhh/marcaciones/horario',
+                            url: '/main/rrhh/marcaciones/horario',
                             breadcrumbs: false
                         },
                         {
                             id: 'maquinas',
                             title: 'Maquinas',
                             type: 'item',
-                            url: '/rrhh/marcaciones/maquinas_biometricos',
+                            url: '/main/rrhh/marcaciones/maquinas_biometricos',
                             breadcrumbs: false
                         },
                         {
                             id: 'tolerancias',
                             title: 'Tolerancias',
                             type: 'item',
-                            url: '/rrhh/marcaciones/gestion_tolerancias',
+                            url: '/main/rrhh/marcaciones/gestion_tolerancias',
                             breadcrumbs: false
                         }
                     ]
@@ -344,63 +344,63 @@ const other = {
                     id: 'ubicaciones',
                     title: 'Ubicaciones',
                     type: 'item',
-                    url: '/rrhh/administracion/ubicaciones',
+                    url: '/main/rrhh/administracion/ubicaciones',
                     breadcrumbs: false
                 },
                 {
                     id: 'configuraciones-generales',
                     title: 'Configuraciones Generales',
                     type: 'item',
-                    url: '/configuraciones_generales',
+                    url: '/main/configuraciones_generales',
                     breadcrumbs: false
                 },
                 {
                     id: 'formulario-salida',
                     title: 'Formulario de Salida',
                     type: 'item',
-                    url: '/rrhh/boletas/boletas',
+                    url: '/main/rrhh/boletas/boletas',
                     breadcrumbs: false
                 },
                 {
                     id: 'feriados',
                     title: 'Feriados',
                     type: 'item',
-                    url: '/rrhh/administracion/feriados',
+                    url: '/main/rrhh/administracion/feriados',
                     breadcrumbs: false
                 },
                 {
                     id: 'entidad',
                     title: 'Entidad',
                     type: 'item',
-                    url: '/configuraciones/entidad',
+                    url: '/main/configuraciones/entidad',
                     breadcrumbs: false
                 },
                 {
                     id: 'documentos',
                     title: 'Documentos',
                     type: 'item',
-                    url: '/archivo/documento',
+                    url: '/main/archivo/documento',
                     breadcrumbs: false
                 },
                 {
                     id: 'resoluciones',
                     title: 'Resoluciones',
                     type: 'item',
-                    url: '/configuraciones/resolucion',
+                    url: '/main/configuraciones/resolucion',
                     breadcrumbs: false
                 },
                 {
                     id: 'niveles-salariales',
                     title: 'Niveles Salariales',
                     type: 'item',
-                    url: '/contrataciones/nivel_salarial',
+                    url: '/main/contrataciones/nivel_salarial',
                     breadcrumbs: false
                 },
                 {
                     id: 'nivel-academico',
                     title: 'Nivel Académico',
                     type: 'item',
-                    url: '/rrhh/personal/nivel_academico',
+                    url: '/main/rrhh/personal/nivel_academico',
                     breadcrumbs: false
                 }
             ]
@@ -415,21 +415,21 @@ const other = {
                     id: 'generar-planillas',
                     title: 'Generar Planillas',
                     type: 'item',
-                    url: '/rrhh/planilla/generacion',
+                    url: '/main/rrhh/planilla/generacion',
                     breadcrumbs: false
                 },
                 {
                     id: 'reportes',
                     title: 'Reportes',
                     type: 'item',
-                    url: '/rrhh/planilla/reportes',
+                    url: '/main/rrhh/planilla/reportes',
                     breadcrumbs: false
                 },
                 {
                     id: 'reportes-formulario',
                     title: 'Reportes Formulario',
                     type: 'item',
-                    url: '/rrhh/boletas/reporte',
+                    url: '/main/rrhh/boletas/reporte',
                     breadcrumbs: false
                 }
             ]
@@ -438,7 +438,7 @@ const other = {
             id: 'notificaciones',
             title: 'Notificaciones',
             type: 'item',
-            url: '/notificaciones',
+            url: '/main/notificaciones',
             icon: icons.NotificationsActiveIcon,
             breadcrumbs: false
         }

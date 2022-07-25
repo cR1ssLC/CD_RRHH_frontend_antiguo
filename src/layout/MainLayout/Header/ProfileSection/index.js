@@ -1,7 +1,8 @@
+/* eslint-disable */
 import { useState, useRef, useEffect } from 'react';
-
 import { useNavigate } from 'react-router-dom';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
+import configData from '../../../../config';
 
 // material-ui
 import { useTheme } from '@mui/material/styles';
@@ -21,14 +22,16 @@ import {
 
 // third-party
 import PerfectScrollbar from 'react-perfect-scrollbar';
+import axios from 'axios';
 
 // project imports
 import MainCard from 'ui-component/cards/MainCard';
 import Transitions from 'ui-component/extended/Transitions';
-import User1 from 'assets/images/users/user_default_logo.png';
+import { LOGOUT } from '../../../../store/actions';
 
 // assets
 import { IconLogout, IconSettings, IconUser } from '@tabler/icons';
+import User1 from 'assets/images/users/user_default_logo.png';
 
 // ==============================|| PROFILE MENU ||============================== //
 
@@ -36,6 +39,8 @@ const ProfileSection = () => {
     const theme = useTheme();
     const customization = useSelector((state) => state.customization);
     const navigate = useNavigate();
+    const account = useSelector((state) => state.account);
+    const dispatcher = useDispatch();
 
     const [selectedIndex, setSelectedIndex] = useState(-1);
     const [open, setOpen] = useState(false);
@@ -44,7 +49,22 @@ const ProfileSection = () => {
      * */
     const anchorRef = useRef(null);
     const handleLogout = async () => {
-        console.log('Logout');
+        console.log(account.token);
+        axios
+            .post(configData.API_SERVER + '/logout', { token: `${account.token}` }, { headers: { Authorization: `${account.token}` } })
+            .then(function (response) {                
+                // Force the LOGOUT
+                // if (response.data.success) {
+                    dispatcher({ type: LOGOUT });
+                // } else {
+                //    console.log('response - ', response.data.msg);
+                // }
+            })
+            .catch(function (error) {
+                console.log('error - ', error);
+            });
+        navigate('/login');
+        console.log('Logged out');
     };
 
     const handleClose = (event) => {
@@ -83,11 +103,11 @@ const ProfileSection = () => {
                     alignItems: 'center',
                     borderRadius: '27px',
                     transition: 'all .2s ease-in-out',
-                    borderColor: theme.palette.primary.light,
-                    backgroundColor: theme.palette.primary.light,
+                    borderColor: theme.palette.secondary.dark,
+                    backgroundColor: theme.palette.secondary.light,
                     '&[aria-controls="menu-list-grow"], &:hover': {
-                        borderColor: theme.palette.primary.main,
-                        background: `${theme.palette.primary.main}!important`,
+                        borderColor: theme.palette.secondary.dark,
+                        background: `${theme.palette.secondary.main}!important`,
                         color: theme.palette.primary.light,
                         '& svg': {
                             stroke: theme.palette.primary.light
@@ -163,7 +183,7 @@ const ProfileSection = () => {
                                                 <ListItemButton
                                                     sx={{ borderRadius: `${customization.borderRadius}px` }}
                                                     selected={selectedIndex === 1}
-                                                    onClick={(event) => handleListItemClick(event, 1, '/ficha-personal')}
+                                                    onClick={(event) => handleListItemClick(event, 1, '/main/ficha-personal')}
                                                 >
                                                     <ListItemIcon>
                                                         <IconUser stroke={1.5} size="1.3rem" />
@@ -173,7 +193,7 @@ const ProfileSection = () => {
                                                 <ListItemButton
                                                     sx={{ borderRadius: `${customization.borderRadius}px` }}
                                                     selected={selectedIndex === 0}
-                                                    onClick={(event) => handleListItemClick(event, 0, '/seguridad/change_password')}
+                                                    onClick={(event) => handleListItemClick(event, 0, '/main/seguridad/change_password')}
                                                 >
                                                     <ListItemIcon>
                                                         <IconSettings stroke={1.5} size="1.3rem" />

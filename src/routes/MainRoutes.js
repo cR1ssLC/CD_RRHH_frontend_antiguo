@@ -74,291 +74,296 @@ const MainRoutes = {
             element: <MainPage />
         },
         {
-            path: 'main-page',
-            element: <MainPage />
-        },
-        {
-            // ------------PARAMETROS-DOCUMENTO-------
-            path: 'archivo',
+            path: 'main',
             children: [
                 {
-                    path: 'documento',
-                    element: <Documentos />
-                }
-            ]
-        },
-        {
-            path: 'configuraciones',
-            children: [
-                {
-                    // ------------PARAMETROS-ENTIDAD-------
-                    path: 'entidad',
-                    element: <Entidad />
+                    path: 'main-page',
+                    element: <MainPage />
                 },
                 {
-                    // ------------PARAMETROS-RESOLUCIONES-------
-                    path: 'resolucion',
-                    element: <Resoluciones />
-                }
-            ]
-        },
-        {
-            // ------------PARAMETROS-CONFIGURACIONES-GENERALES-------
-            path: 'configuraciones_generales',
-            element: <ConfiguracionesGenerales />
-        },
-        {
-            path: 'contrataciones',
-            children: [
-                {
-                    // ------------PARAMETROS-NIVEL SALARIAL-------
-                    path: 'nivel_salarial',
-                    element: <NivelSalarial />
-                }
-            ]
-        },
-        {
-            // -----------NOTIFICACIONES--------------
-            path: 'notificaciones',
-            element: <Notificaciones />
-        },
-        {
-            // ------------FICHA-PERSONAL-----------
-            path: 'ficha-personal',
-            element: <FichaPersonal />
-        },
-        {
-            path: 'incorporacion',
-            children: [
-                {
-                    // ------------GESTION ORGANIZACIONAL-ORGANIGRAMAS-------
-                    path: 'organigramas',
-                    element: <Organigramas />
-                },
-                {
-                    // ----------GESTION ORGNIZACIONAL-CARGOS------------
-                    path: 'cargos',
-                    element: <Cargos />
-                }
-            ]
-        },
-        {
-            path: 'rrhh',
-            children: [
-                {
-                    path: 'administracion',
+                    // ------------PARAMETROS-DOCUMENTO-------
+                    path: 'archivo',
                     children: [
                         {
-                            // ------------PARAMETROS-UBICACIONES-------
-                            path: 'ubicaciones',
-                            element: <Ubicaciones />
-                        },
-                        {
-                            // ------------PARAMETROS-FERIADOS-------
-                            path: 'feriados',
-                            element: <Feriados />
+                            path: 'documento',
+                            element: <Documentos />
                         }
                     ]
                 },
                 {
-                    path: 'boletas',
+                    path: 'configuraciones',
                     children: [
                         {
-                            // --------AUTORIZACIONES-REG FORMULARIO-------
-                            path: 'regularizaciones',
-                            element: <AutRegFormulario />
+                            // ------------PARAMETROS-ENTIDAD-------
+                            path: 'entidad',
+                            element: <Entidad />
                         },
                         {
-                            // ----CONTROL DE PERSONAL-APROBACION FORMULARIO----
-                            path: 'aprobacion_boletas',
-                            element: <AprobacionFormulario />
-                        },
-                        {
-                            // ----CONTROL DE PERSONAL-RECEPCION FORMULARIO-----
-                            path: 'recepcion_boletas',
-                            element: <RecepcionFormulario />
-                        },
-                        {
-                            // ----CONTROL DE PERSONAL-SOLICITUD FORMULARIO-----
-                            path: 'solicitud_boleta',
-                            element: <SolicitarFormulario />
-                        },
-                        {
-                            // ----PLANILLAS-RESPORTES FORMULARIO----
-                            path: 'reporte',
-                            element: <ReportesFormulario />
-                        },
-                        {
-                            // ----PARAMETROS-FORMULARIO SALIDA-------
-                            path: 'boletas',
-                            element: <FormularioSalida />
+                            // ------------PARAMETROS-RESOLUCIONES-------
+                            path: 'resolucion',
+                            element: <Resoluciones />
                         }
                     ]
                 },
                 {
-                    // ----ADMINITRACION DEL PERSONAL-CUMPLEANIERO------
-                    path: 'cumpleaniero',
-                    element: <Cumpleanieros />
+                    // ------------PARAMETROS-CONFIGURACIONES-GENERALES-------
+                    path: 'configuraciones_generales',
+                    element: <ConfiguracionesGenerales />
                 },
                 {
-                    path: 'marcaciones',
+                    path: 'contrataciones',
                     children: [
                         {
-                            // ----PARAMETRO-CALENDARIOS LABORALES-----
-                            path: 'perfil_laboral',
-                            element: <CalendariosLaborales />
-                        },
-                        {
-                            // ----PARAMETROS-HORARIOS-------
-                            path: 'horario',
-                            element: <GestionHorarios />
-                        },
-                        {
-                            // ----PARAMETROS-MAQUINAS BIOMETRICOS-------
-                            path: 'maquinas_biometricos',
-                            element: <Maquinas />
-                        },
-                        {
-                            // ----PARAMETROS-TOLERANCIAS-------
-                            path: 'gestion_tolerancias',
-                            element: <Tolerancias />
-                        },
-                        {
-                            // ----CONTROL DE PERSONAL-MIS MARCACIONES------
-                            path: 'mis_marcaciones',
-                            element: <MisMarcaciones />
-                        },
-                        {
-                            // ----CONTROL DE PERSONAL-MARCADOS-------
-                            path: 'reporte',
-                            element: <Marcados />
-                        },
-                        {
-                            // ----CONTROL DE PERSONAL-VIAJES-------
-                            path: 'viajes',
-                            element: <ViajesComision />
+                            // ------------PARAMETROS-NIVEL SALARIAL-------
+                            path: 'nivel_salarial',
+                            element: <NivelSalarial />
                         }
                     ]
                 },
                 {
-                    path: 'personal',
+                    // -----------NOTIFICACIONES--------------
+                    path: 'notificaciones',
+                    element: <Notificaciones />
+                },
+                {
+                    // ------------FICHA-PERSONAL-----------
+                    path: 'ficha-personal',
+                    element: <FichaPersonal />
+                },
+                {
+                    path: 'incorporacion',
                     children: [
                         {
-                            // ----ADMINISTRACION DEL PERSONAL-EDITAR-------
-                            path: 'editar',
-                            element: <EditarPersonal />
+                            // ------------GESTION ORGANIZACIONAL-ORGANIGRAMAS-------
+                            path: 'organigramas',
+                            element: <Organigramas />
                         },
                         {
-                            // ----ADMINISTRACION DEL PERSONAL-REGISTRAR-------
-                            path: 'registro',
-                            element: <RegistroPersonal />
-                        },
-                        {
-                            // ----PARAMETROS-NIVEL ACADEMICO-------
-                            path: 'nivel_academico',
-                            element: <NivelAcademico />
+                            // ----------GESTION ORGNIZACIONAL-CARGOS------------
+                            path: 'cargos',
+                            element: <Cargos />
                         }
                     ]
                 },
                 {
-                    path: 'planilla',
+                    path: 'rrhh',
                     children: [
                         {
-                            // -----PLANILLAS-GENERAR-----
-                            path: 'generacion',
-                            element: <GenerarPlanillas />
-                        },
-                        {
-                            // -----PLANILLAS-REPORTES-----
-                            path: 'reportes',
-                            element: <Reportes />
-                        }
-                    ]
-                },
-                {
-                    // -----ADMINISTRACION DEL PERSONAL-RELACION LABORAL----
-                    path: 'relacion_laboral',
-                    element: <RelacionLaboral />
-                },
-                {
-                    // -----ADMINISTRACION DEL PERSONAL-UBICACIONES FILE----
-                    path: 'ubicacion_file',
-                    element: <UbicacionFile />
-                },
-                {
-                    path: 'vacaciones',
-                    children: [
-                        {
-                            // ----AUTORIZACIONES-REG VACACIONES----
-                            path: 'regularizaciones',
-                            element: <AutRegVacaciones />
-                        },
-                        {
-                            // ----VACACIONES-REGISTRO----
-                            path: 'registro',
-                            element: <RegistroVacacion />
-                        },
-                        {
-                            path: 'programacion',
+                            path: 'administracion',
                             children: [
                                 {
-                                    // ----VACACIONES-SOL PROGRAMACION VAC----
-                                    path: 'solicitud',
-                                    element: <SolProgramacionVacacion />
+                                    // ------------PARAMETROS-UBICACIONES-------
+                                    path: 'ubicaciones',
+                                    element: <Ubicaciones />
                                 },
                                 {
-                                    // ----VACACIONES-APROBACION PROGRAMACION VAC----
-                                    path: 'aprobacion',
-                                    element: <AprobacionProgramacion />
-                                },
-                                {
-                                    // ----VACACIONES-RECEPCION PROGRAMACION VAC----
-                                    path: 'recepcion',
-                                    element: <RecepcionProgramacionVac />
+                                    // ------------PARAMETROS-FERIADOS-------
+                                    path: 'feriados',
+                                    element: <Feriados />
                                 }
                             ]
                         },
                         {
-                            // ----VACACIONES-SOLICITUD VACACION----
-                            path: 'solicitud',
-                            element: <SolicitudVacaciones />
+                            path: 'boletas',
+                            children: [
+                                {
+                                    // --------AUTORIZACIONES-REG FORMULARIO-------
+                                    path: 'regularizaciones',
+                                    element: <AutRegFormulario />
+                                },
+                                {
+                                    // ----CONTROL DE PERSONAL-APROBACION FORMULARIO----
+                                    path: 'aprobacion_boletas',
+                                    element: <AprobacionFormulario />
+                                },
+                                {
+                                    // ----CONTROL DE PERSONAL-RECEPCION FORMULARIO-----
+                                    path: 'recepcion_boletas',
+                                    element: <RecepcionFormulario />
+                                },
+                                {
+                                    // ----CONTROL DE PERSONAL-SOLICITUD FORMULARIO-----
+                                    path: 'solicitud_boleta',
+                                    element: <SolicitarFormulario />
+                                },
+                                {
+                                    // ----PLANILLAS-RESPORTES FORMULARIO----
+                                    path: 'reporte',
+                                    element: <ReportesFormulario />
+                                },
+                                {
+                                    // ----PARAMETROS-FORMULARIO SALIDA-------
+                                    path: 'boletas',
+                                    element: <FormularioSalida />
+                                }
+                            ]
                         },
                         {
-                            // ----VACACIONES-APROBACION VACACION----
-                            path: 'aprobacion',
-                            element: <AprobacionVacaciones />
+                            // ----ADMINITRACION DEL PERSONAL-CUMPLEANIERO------
+                            path: 'cumpleaniero',
+                            element: <Cumpleanieros />
                         },
                         {
-                            // ----VACACIONES-RECEPCION VACACION----
-                            path: 'recepcion',
-                            element: <RecepcionVacaciones />
+                            path: 'marcaciones',
+                            children: [
+                                {
+                                    // ----PARAMETRO-CALENDARIOS LABORALES-----
+                                    path: 'perfil_laboral',
+                                    element: <CalendariosLaborales />
+                                },
+                                {
+                                    // ----PARAMETROS-HORARIOS-------
+                                    path: 'horario',
+                                    element: <GestionHorarios />
+                                },
+                                {
+                                    // ----PARAMETROS-MAQUINAS BIOMETRICOS-------
+                                    path: 'maquinas_biometricos',
+                                    element: <Maquinas />
+                                },
+                                {
+                                    // ----PARAMETROS-TOLERANCIAS-------
+                                    path: 'gestion_tolerancias',
+                                    element: <Tolerancias />
+                                },
+                                {
+                                    // ----CONTROL DE PERSONAL-MIS MARCACIONES------
+                                    path: 'mis_marcaciones',
+                                    element: <MisMarcaciones />
+                                },
+                                {
+                                    // ----CONTROL DE PERSONAL-MARCADOS-------
+                                    path: 'reporte',
+                                    element: <Marcados />
+                                },
+                                {
+                                    // ----CONTROL DE PERSONAL-VIAJES-------
+                                    path: 'viajes',
+                                    element: <ViajesComision />
+                                }
+                            ]
+                        },
+                        {
+                            path: 'personal',
+                            children: [
+                                {
+                                    // ----ADMINISTRACION DEL PERSONAL-EDITAR-------
+                                    path: 'editar',
+                                    element: <EditarPersonal />
+                                },
+                                {
+                                    // ----ADMINISTRACION DEL PERSONAL-REGISTRAR-------
+                                    path: 'registro',
+                                    element: <RegistroPersonal />
+                                },
+                                {
+                                    // ----PARAMETROS-NIVEL ACADEMICO-------
+                                    path: 'nivel_academico',
+                                    element: <NivelAcademico />
+                                }
+                            ]
+                        },
+                        {
+                            path: 'planilla',
+                            children: [
+                                {
+                                    // -----PLANILLAS-GENERAR-----
+                                    path: 'generacion',
+                                    element: <GenerarPlanillas />
+                                },
+                                {
+                                    // -----PLANILLAS-REPORTES-----
+                                    path: 'reportes',
+                                    element: <Reportes />
+                                }
+                            ]
+                        },
+                        {
+                            // -----ADMINISTRACION DEL PERSONAL-RELACION LABORAL----
+                            path: 'relacion_laboral',
+                            element: <RelacionLaboral />
+                        },
+                        {
+                            // -----ADMINISTRACION DEL PERSONAL-UBICACIONES FILE----
+                            path: 'ubicacion_file',
+                            element: <UbicacionFile />
+                        },
+                        {
+                            path: 'vacaciones',
+                            children: [
+                                {
+                                    // ----AUTORIZACIONES-REG VACACIONES----
+                                    path: 'regularizaciones',
+                                    element: <AutRegVacaciones />
+                                },
+                                {
+                                    // ----VACACIONES-REGISTRO----
+                                    path: 'registro',
+                                    element: <RegistroVacacion />
+                                },
+                                {
+                                    path: 'programacion',
+                                    children: [
+                                        {
+                                            // ----VACACIONES-SOL PROGRAMACION VAC----
+                                            path: 'solicitud',
+                                            element: <SolProgramacionVacacion />
+                                        },
+                                        {
+                                            // ----VACACIONES-APROBACION PROGRAMACION VAC----
+                                            path: 'aprobacion',
+                                            element: <AprobacionProgramacion />
+                                        },
+                                        {
+                                            // ----VACACIONES-RECEPCION PROGRAMACION VAC----
+                                            path: 'recepcion',
+                                            element: <RecepcionProgramacionVac />
+                                        }
+                                    ]
+                                },
+                                {
+                                    // ----VACACIONES-SOLICITUD VACACION----
+                                    path: 'solicitud',
+                                    element: <SolicitudVacaciones />
+                                },
+                                {
+                                    // ----VACACIONES-APROBACION VACACION----
+                                    path: 'aprobacion',
+                                    element: <AprobacionVacaciones />
+                                },
+                                {
+                                    // ----VACACIONES-RECEPCION VACACION----
+                                    path: 'recepcion',
+                                    element: <RecepcionVacaciones />
+                                }
+                            ]
                         }
                     ]
-                }
-            ]
-        },
-        {
-            path: 'seguridad',
-            children: [
-                {
-                    // ----ADM. SEGURIDAD-CAMBIO PASSWORD----
-                    path: 'change_password',
-                    element: <CambioPassword />
                 },
                 {
-                    // ----ADM. SEGURIDAD-RESTABLECER PASS----
-                    path: 'reset_password',
-                    element: <RestablecerPassword />
-                },
-                {
-                    // ----ADM. SEGURIDAD-USUARIOS----
-                    path: 'usuarios',
-                    element: <GestionUsuarios />
-                },
-                {
-                    // ----ADM. SEGURIDAD-MI CONFI----
-                    path: 'mi_cuenta',
-                    element: <MiCuenta />
+                    path: 'seguridad',
+                    children: [
+                        {
+                            // ----ADM. SEGURIDAD-CAMBIO PASSWORD----
+                            path: 'change_password',
+                            element: <CambioPassword />
+                        },
+                        {
+                            // ----ADM. SEGURIDAD-RESTABLECER PASS----
+                            path: 'reset_password',
+                            element: <RestablecerPassword />
+                        },
+                        {
+                            // ----ADM. SEGURIDAD-USUARIOS----
+                            path: 'usuarios',
+                            element: <GestionUsuarios />
+                        },
+                        {
+                            // ----ADM. SEGURIDAD-MI CONFI----
+                            path: 'mi_cuenta',
+                            element: <MiCuenta />
+                        }
+                    ]
                 }
             ]
         }

@@ -27,28 +27,12 @@ import { DataGrid, GridToolbarQuickFilter, GridLinkOperator, esES } from '@mui/x
 import * as React from 'react';
 import { styled } from '@mui/material/styles';
 // ==============================|| PAGE ||============================== //
-const StyledGridOverlay = styled('div')(({ theme }) => ({
+const StyledGridOverlay = styled('div')(() => ({
     display: 'flex',
     flexDirection: 'column',
     alignItems: 'center',
     justifyContent: 'center',
-    height: '100%',
-    '& .ant-empty-img-1': {
-        fill: theme.palette.mode === 'light' ? '#aeb8c2' : '#262626'
-    },
-    '& .ant-empty-img-2': {
-        fill: theme.palette.mode === 'light' ? '#f5f5f7' : '#595959'
-    },
-    '& .ant-empty-img-3': {
-        fill: theme.palette.mode === 'light' ? '#dce0e6' : '#434343'
-    },
-    '& .ant-empty-img-4': {
-        fill: theme.palette.mode === 'light' ? '#fff' : '#1c1c1c'
-    },
-    '& .ant-empty-img-5': {
-        fillOpacity: theme.palette.mode === 'light' ? '0.8' : '0.08',
-        fill: theme.palette.mode === 'light' ? '#f5f5f5' : '#fff'
-    }
+    height: '100%'
 }));
 function CustomNoRowsOverlay() {
     return (
@@ -303,23 +287,14 @@ const AutRegFormulario = () => {
                                     ( Mínimo de 50 caracteres )
                                 </Typography>
                             </DialogContentText>
-                            <TextField
-                                id="descripcion"
-                                required
-                                margin="dense"
-                                multiline
-                                rows={4}
-                                maxRows={4}
-                                fullWidth
-                                variant="standard"
-                            />
+                            <TextField id="descripcion" required margin="dense" multiline rows={4} fullWidth variant="standard" />
                         </DialogContent>
                         <Box sx={{ flexGrow: 1 }}>
-                            <Grid container spacing={3}>
-                                <Grid item xs={1}>
+                            <Grid container rowSpacing={1} columnSpacing={{ xs: 1, sm: 2, md: 3 }}>
+                                <Grid item xs={0}>
                                     <Paper elevation={0} />
                                 </Grid>
-                                <Grid item xs={4}>
+                                <Grid item xs={5.5}>
                                     <Stack direction="column" spacing={1} justifyContent="center" alignItems="flex-start">
                                         <DialogContentText>
                                             <Typography color="error" display="inline">
@@ -337,7 +312,7 @@ const AutRegFormulario = () => {
                                         />
                                     </Stack>
                                 </Grid>
-                                <Grid item xs={6}>
+                                <Grid item xs={4}>
                                     <Stack direction="column" spacing={1} justifyContent="center" alignItems="flex-start">
                                         <DialogContentText>
                                             <Typography color="error" display="inline">
@@ -395,6 +370,7 @@ const AutRegFormulario = () => {
                     columns={columns}
                     rowHeight={45}
                     pageSize={5}
+                    rowsPerPageOptions={[5]}
                     disableColumnSelector
                     hideFooterSelectedRowCount
                     disableSelectionOnClick={false}
